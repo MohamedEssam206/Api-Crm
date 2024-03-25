@@ -1,0 +1,496 @@
+{
+	"info": {
+		"_postman_id": "86853d6e-a131-46ba-8f77-b68b469313df",
+		"name": "Crm",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30517164"
+	},
+	"item": [
+		{
+			"name": "customers",
+			"item": [
+				{
+					"name": "all customers",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/customers/3",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"customers",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "customer by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/customers/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"customers",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create customer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"olaa\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/customers",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"customers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete customer",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/customers/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"customers",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update customer",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"mohammed\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/customers/3",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"customers",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}customers/export?format=pdf",
+							"host": [
+								"{{BASE_URL}}customers"
+							],
+							"path": [
+								"export"
+							],
+							"query": [
+								{
+									"key": "format",
+									"value": "pdf"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "notes",
+			"item": [
+				{
+					"name": "all customers notes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/customers/1/notes",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"customers",
+								"1",
+								"notes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "customer  note by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/customers/1/notes/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"customers",
+								"1",
+								"notes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create customer note",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"note\" : \"hello customer\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/customers/1/notes",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"customers",
+								"1",
+								"notes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete customer",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/customers/1/notes/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"customers",
+								"1",
+								"notes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update note customer",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"note\" : \"hi mohamed\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/customers/1/notes/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"customers",
+								"1",
+								"notes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "projects",
+			"item": [
+				{
+					"name": "all customers prjects",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/customers/1/prjects",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"customers",
+								"1",
+								"prjects"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "customer  project by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/customers/1/prjects/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"customers",
+								"1",
+								"prjects",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create customer project",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"project_name\" : \"project one\",\r\n    \"status\" : 10,\r\n    \"project_cost\" : 1000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/customers/1/projects",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"customers",
+								"1",
+								"projects"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete project customer",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/customers/{id}",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"customers",
+								"{id}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update project customer",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"note\" : \"hi mohamed\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/customers/1/notes/1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"customers",
+								"1",
+								"notes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "New Request",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.environment.set(\"token\", pm.response.json().token);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"magi\",\r\n    \"email\" : \"magi@mail.com\",\r\n    \"password\" : \"Ali123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}users",
+							"host": [
+								"{{BASE_URL}}users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
